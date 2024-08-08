@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PCube - Consultancy</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+                .service-section {
+            background-color: #092A48;
+            color: white;
+            padding: 60px 0;
+        }
+        .service-section .section-title h2 {
+            color: #48C7EC;
+            
+        }
+        .service-section .section-title .border-2 {
+            width: 80px;
+            height: 4px;
+            background-color: #48C7EC;
+            margin: 20px auto;
+        }
+        .service-wrapper {
+            background: #092A48;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .service-wrapper i {
+            font-size: 3rem;
+            color: #48C7EC;
+            margin-bottom: 15px;
+        }
+        .service-wrapper .wrapper-content h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .service-wrapper .wrapper-content p {
+            color: #d1d1d1;
+        }
+        .service-wrapper .hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(72, 199, 236, 0.2);
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+        .service-wrapper:hover .hover {
+            opacity: 1;
+        }
+        .hover span {
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(72, 199, 236, 0.5);
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .hover-one { top: 10%; left: 10%; }
+        .hover-two { top: 10%; right: 10%; }
+        .hover-three { bottom: 10%; left: 10%; }
+        .hover-four { bottom: 10%; right: 10%; }
+        .hover-one:hover { transform: scale(1.5); }
+        .hover-two:hover { transform: scale(1.5); }
+        .hover-three:hover { transform: scale(1.5); }
+        .hover-four:hover { transform: scale(1.5); }
+
+        .card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s;
+        }
+        .card-body i {
+            transition: color 0.3s;
+        }
+        .card:hover .card-body i {
+            color: #48C7EC;
+        }
+
+                /* Custom CSS */
+                .about-company {
+            background-color: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .about-company::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+    
+        .about-company::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+    
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: #007bff;
+        }
+    
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+    
+
+    
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: all 0.3s ease;
+        }
+    
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        /* Counting Stle */
+
+
+        .counting-section {
+            background-color: #092A48;
+            padding: 60px 0;
+        }
+
+        .counting-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .counting-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .counting-wrapper img {
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        .count-description {
+            font-size: 36px;
+            color: #48C7EC;
+        }
+
+        .count-description .plus {
+            font-size: 24px;
+            color: #48C7EC;
+        }
+
+        .counting-wrapper p {
+            margin: 0;
+            font-size: 18px;
+            color: #48C7EC;
+
+        }
+
+        /* Portfolio Cards Style */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .project-overlay {
+            background: rgba(0, 123, 255, 0.404);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+    
+        .project-overlay a {
+            text-decoration: none;
+        }
+    
+        .project-overlay h4,
+        .project-overlay p {
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+    
+        .project-card:hover .project-overlay h4,
+        .project-card:hover .project-overlay p {
+            transform: translateY(0);
+        }
+
+        /* Timeline Css start---------- */
+
+        .timeline {
+  position: relative;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+.timeline-badge {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  z-index: 100;
+  border-radius: 50%;
+  color: #007bff;
+}
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.timeline-item:nth-child(even) .timeline-content {
+  left: 55%;
+}
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+.timeline-item:nth-child(odd) .timeline-content::after,
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.timeline-item:nth-child(odd) .timeline-content::after {
+  right: -15px;
+  border-left: 15px solid #fff;
+}
+.timeline-item:nth-child(even) .timeline-content::after {
+  left: -15px;
+  border-right: 15px solid #fff;
+}
+@media (max-width: 767px) {
+  .timeline::before {
+    left: 40px;
+  }
+  .timeline-badge {
+    left: 40px;
+  }
+  .timeline-content {
+    width: calc(100% - 90px);
+    left: 90px !important;
+  }
+  .timeline-item:nth-child(odd) .timeline-content::after {
+    left: -15px;
+    border-right: 15px solid #fff;
+    border-left: none;
+  }
+}
+
+/* Timeline Css end---------- */
+
+.blurred-section-container {
+        position: relative;
+    }
+    
+    .blurred-section {
+        filter: blur(5px);
+        pointer-events: none;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+    }
+
+    .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-item {
+            height: 100vh;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            margin: auto;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .carousel-caption h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+        }
+        @media (max-width: 768px) {
+            .carousel-caption {
+                display: block !important;
+                padding: 10px;
+            }
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+            .carousel-caption h2 {
+                font-size: 1.5rem;
+            }
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            .btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="pcube_logo_final.png" alt="image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="/slider/slider-1.jpg" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption">
+                        <h1>Plan | Develop | Operate</h1>
+                        <h2 class="text-white">Your Fitness Journey</h2>
+                        <p>Comprehensive solutions for gym owners</p>
+                        <p>Plan, develop, and operate with excellence</p>
+                        <a href="#" class="btn btn-primary me-2 mt-2" style="width: 14rem;">Contact Us</a>
+                        <a href="#" class="btn btn-outline-light mt-2"  style="width: 14rem;">Book an Appointment</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="/slider/slider-2.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <h1>Innovative Solutions</h1>
+                        <h2 class="text-white">Transform Your Gym</h2>
+                        <p>Maximize efficiency and engagement</p>
+                        <a href="#" class="btn btn-primary me-2 mt-2" style="width: 14rem;">Learn More</a>
+                        <a href="#" class="btn btn-outline-light mt-2"  style="width: 14rem;">Get Started</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="/slider/slider-3.jpg" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption">
+                        <h1>Grow with Us</h1>
+                        <h2 class="text-white">Achieve Your Goals</h2>
+                        <p>Partner with us for success</p>
+                        <a href="#" class="btn btn-primary me-2 mt-2" style="width: 14rem;">Join Now</a>
+                        <a href="#" class="btn btn-outline-light mt-2"  style="width: 14rem;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+
+<!-- Additional CSS for enhanced styling using Bootstrap classes -->
+<!-- <style>
+    .hero-section {
+        position: relative;
+    }
+
+    .carousel-item img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .carousel-caption h1, .carousel-caption h2, .carousel-caption p {
+        color: #fff;
+    }
+</style> -->
+
+
+    <!-- Problems Section -->
+    <section class="problems-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Problems Gyms Face to Scale</h2>
+                <hr class="mx-auto" style="width: 50px;">
+                <p>Understanding these challenges is crucial for gym owners and managers looking to grow their business.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Member Retention</h4>
+                            <p class="card-text">High turnover, low engagement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Marketing</h4>
+                            <p class="card-text">Ineffective strategies, audience reach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Operations</h4>
+                            <p class="card-text">Poor scheduling, resource management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Finances</h4>
+                            <p class="card-text">Cash flow issues, low profitability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Technology</h4>
+                            <p class="card-text">Outdated systems, weak online presence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-users"></i> Member Retention</h4>
+                            <p class="card-text">High turnover, low engagement</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other problem items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="coach.png" alt="Gym Transformation" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h2>Transform Your Gym's Potential with PCube Consultancy</h2>
+                    <p class="lead">Unlock new heights for your gym with Pcube Consultation. Our tailored solutions address your specific challenges, ensuring:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-primary"></i> Enhanced member retention</li>
+                        <li><i class="fas fa-check-circle text-primary"></i> Streamlined operations</li>
+                        <li><i class="fas fa-check-circle text-primary"></i> Boosted profitability</li>
+                    </ul>
+                    <p>Experience a revolutionary approach to gym management</p>
+                    <a href="index.html#about" class="btn btn-primary btn-lg mt-3">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section section-padding">
+        <div class="container" id="service">
+            <div class="section-title text-center mb-5">
+                <h2 class="text-white">Our Services</h2>
+                <!-- <div class="border-2"></div> -->
+            </div> <!-- section-title -->
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Marketing and Branding</a></h3>
+                            <p>Digital marketing campaigns, social media management, branding and rebranding strategies.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Operational Management</a></h3>
+                            <p>Staff training and development, space optimization, class and schedule management.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fas fa-wallet" aria-hidden="true"></i> 
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Financial Services</a></h3>
+                            <p>Budget planning and management, cost reduction strategies, revenue enhancement techniques.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Technological Integration</a></h3>
+                            <p>Website and app development, membership management software, online booking systems.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Member Retention Programs</a></h3>
+                            <p>Loyalty and reward programs, member engagement strategies, feedback and improvement systems.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="service-wrapper">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <div class="wrapper-content">
+                            <h3><a href="#" class="text-decoration-none text-white">Competitive Analysis</a></h3>
+                            <p>Market research and analysis, unique selling propositions (USPs), strategic planning.</p>
+                        </div>
+                        <div class="hover">
+                            <span class="hover-one"></span>
+                            <span class="hover-two"></span>
+                            <span class="hover-three"></span>
+                            <span class="hover-four"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- service-section -->
+
+
+    <section class="py-5 bg-light" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Expertise</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-4">
+                                <i class="fa fa-home fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="card-title text-center mb-4">Home Gyms</h3>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Enjoy the convenience and bespoke personal environment of a dedicated home workout space</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Get your workouts done according to your needs and without wasted travel time</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Add significant value to your home</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-4">
+                                <i class="fa fa-building fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="card-title text-center mb-4">Corporate Fitness</h3>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Motivate your staff with an industry-leading fitness offer/set yourself apart with an industry-leading health and fitness business</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Invest in your employees' long term health and wellbeing/ help the public get healthier and happier with your business</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-center mb-4">
+                                <i class="fa fa-city fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="card-title text-center mb-4">Residential Developments</h3>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Differentiate your development with an innovative, high-end fitness facility</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Add value to each marketed property and create new revenue streams</span>
+                                </li>
+                                <li class="d-flex align-items-start">
+                                    <i class="fa fa-check-circle text-success me-2 mt-1"></i>
+                                    <span>Build your brand values and awareness through positive and health conscious publicity and sensibilities</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="about-company py-5">
+        <div class="container" id="about">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <div class="section-title">
+                        <h2>About Pcube Consultation</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h3 class="h2 mb-4">Your Trusted Partner in Gym Management and Growth</h3>
+                    
+                    <p class="lead mb-4">At Pcube Consultation, we specialize in providing comprehensive solutions to help gyms and fitness centers achieve their fullest potential. Our expert team is dedicated to addressing the unique challenges faced by the fitness industry, ensuring sustainable growth and operational excellence.</p>
+                    
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <div class="feature-icon">
+                                <i class="bi bi-check-circle-fill text-primary fs-4"></i>
+                            </div>
+                            <span>Customized strategies to enhance member engagement and retention.</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <div class="feature-icon">
+                                <i class="bi bi-gear-fill text-primary fs-4"></i>
+                            </div>
+                            <span>Streamlined operations to save time, resources, and money.</span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <div class="feature-icon">
+                                <i class="bi bi-graph-up-arrow text-primary fs-4"></i>
+                            </div>
+                            <span>Innovative marketing and branding solutions to boost visibility.</span>
+                        </li>
+                    </ul>
+                    
+                    <p class="mb-0">We are committed to helping you create a thriving fitness environment that not only attracts new members but also fosters loyalty and satisfaction among your existing clientele. Let Pcube Consultation be the catalyst for your gym's success.</p>
+                </div>
+                
+                <div class="col-lg-5" id="contact">
+                    <div class="contact-form-wrapper p-3">
+                        <div class="card shadow-lg">
+                            <div class="card-body p-5">
+                                <h3 class="card-title text-center mb-4">Book your consultation</h3>
+                                <form class="contact-form">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="your@email.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Your Phone Number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="website" class="form-label">Website</label>
+                                        <input type="url" class="form-control" id="website" name="website" required placeholder="https://yourwebsite.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" name="message" rows="3" required placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="counting-section py-5 text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="counting-wrapper d-flex flex-column align-items-center">
+                        <span class="icon mb-3">
+                            <i class="bi bi-award" style="font-size: 4rem;"></i>
+                        </span>
+                        <div class="content">
+                            <div class="count-description mb-2">
+                                <span class="timer display-4 fw-bold">50</span>
+                                <span class="plus fs-4">+</span>
+                            </div>
+                            <p class="mb-0 fs-5">Successful Projects</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="counting-wrapper d-flex flex-column align-items-center">
+                        <span class="icon mb-3">
+                            <i class="bi bi-building" style="font-size: 4rem;"></i>
+                        </span>
+                        <div class="content">
+                            <div class="count-description mb-2">
+                                <span class="timer display-4 fw-bold">7</span>
+                                <span class="plus fs-4">+</span>
+                            </div>
+                            <p class="mb-0 fs-5">Operating Gyms</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6">
+                    <div class="counting-wrapper d-flex flex-column align-items-center">
+                        <span class="icon mb-3">
+                            <i class="bi bi-translate" style="font-size: 4rem;"></i>
+                        </span>
+                        <div class="content">
+                            <div class="count-description mb-2">
+                                <span class="timer display-4 fw-bold">6</span>
+                                <span class="plus fs-4">+</span>
+                            </div>
+                            <p class="mb-0 fs-5">Languages Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="project-section py-5">
+        <div class="container" id="portfolio">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold">Our Services</h2>
+                    <div class="border-bottom border-3 border-primary w-25 mx-auto"></div>
+                </div>
+            </div>
+    
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="Model_Town.png" class="card-img-top" alt="PCube Fitness Model Town">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white project-overlay">
+                            <h4 class="card-title">PCube Fitness</h4>
+                            <p class="card-text">Model Town</p>
+                            <a href="#" class="text-white align-self-end"><i class="bi bi-link-45deg fs-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="Rohtak.png" class="card-img-top" alt="PCube Fitness Rohtak">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white project-overlay">
+                            <h4 class="card-title">PCube Fitness</h4>
+                            <p class="card-text">Rohtak</p>
+                            <a href="#" class="text-white align-self-end"><i class="bi bi-link-45deg fs-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="Pitampura.png" class="card-img-top" alt="PCube Fitness Pitampura">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white project-overlay">
+                            <h4 class="card-title">PCube Fitness</h4>
+                            <p class="card-text">Pitampura</p>
+                            <a href="#" class="text-white align-self-end"><i class="bi bi-link-45deg fs-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="Home-Gym.png" class="card-img-top" alt="Home Gyms">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white project-overlay">
+                            <h4 class="card-title">Home Gyms</h4>
+                            <a href="#" class="text-white align-self-end"><i class="bi bi-link-45deg fs-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <section class="testimonials py-5 bg-light" id="testimonials">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">What Our Clients Say</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                
+                                <div>
+                                    <h5 class="card-title mb-0">Sanheen Sethi</h5>
+                                    <h6 class="text-muted">Fitness Enthusiast</h6>
+                                </div>
+                            </div>
+                            <p class="card-text">"The gym's layout is perfect! I love how the equipment is arranged, making my workouts efficient and enjoyable. The staff is always ready to help, too!"</p>
+                        </div>
+                        <div class="card-footer text-center bg-transparent">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                
+                                <div>
+                                    <h5 class="card-title mb-0">Kunal Sareen</h5>
+                                    <h6 class="text-muted">Gym Owner</h6>
+                                </div>
+                            </div>
+                            <p class="card-text">"The consulting services provided were invaluable. They helped me streamline operations and significantly boost membership. Highly recommended!"</p>
+                        </div>
+                        <div class="card-footer text-center bg-transparent">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                
+                                <div>
+                                    <h5 class="card-title mb-0">Ishita Batra</h5>
+                                    <h6 class="text-muted">Personal Trainer</h6>
+                                </div>
+                            </div>
+                            <p class="card-text">"As a trainer, I appreciate the thought put into equipment selection. It allows me to design varied and effective programs for my clients."</p>
+                        </div>
+                        <div class="card-footer text-center bg-transparent">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-light" style="margin-top: 50px;">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Our Project Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="timeline-content">
+                        <h4>1. Finalizing Location</h4>
+                        <p>Carefully selecting the perfect spot for our gym.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fas fa-pencil-ruler"></i></div>
+                    <div class="timeline-content">
+                        <h4>2. Layout and Designs</h4>
+                        <p>Creating an optimal floor plan and aesthetic.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fas fa-dumbbell"></i></div>
+                    <div class="timeline-content">
+                        <h4>3. Ordering Equipments</h4>
+                        <p>Sourcing top-quality fitness gear for our members.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fas fa-bullhorn"></i></div>
+                    <div class="timeline-content">
+                        <h4>4. Brand Development and Marketing</h4>
+                        <p>Crafting our unique identity and spreading the word.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge"><i class="fas fa-users"></i></div>
+                    <div class="timeline-content">
+                        <h4>5. Pre Sales Team: Hiring</h4>
+                        <p>Building a dynamic team to drive initial sales.</p>
+                    </div>
+                </div>
+                <div class="blurred-section-container" style="position: relative;">
+                    <div class="blurred-section" style="filter: blur(5px); pointer-events: none;">
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-primary"><i class="fas fa-chart-line"></i></div>
+                            <!-- <div class="timeline-content">
+                                <h4>6. Pre Sales Campaign</h4>
+                                <p>Launching our first outreach to potential members.</p>
+                            </div> -->
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div class="timeline-content">
+                                <h4>6. Full Staff Requirement and Training</h4>
+                                <p>Completing our team and ensuring they're ready to excel.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fas fa-door-open"></i></div>
+                            <div class="timeline-content">
+                                <h4>7. Soft Launch</h4>
+                                <p>Opening our doors for a trial run with select members.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fas fa-ribbon"></i></div>
+                            <div class="timeline-content">
+                                <h4>8. Grand Opening</h4>
+                                <p>Celebrating our official launch with the community.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fas fa-rocket"></i></div>
+                            <div class="timeline-content">
+                                <h4>9. Post Launch Operation and Growth</h4>
+                                <p>Continuously improving and expanding our services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.5);">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Book Your Appoinment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Is the gym business profitable?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, the gym business can be highly profitable with the right strategies in place. Our consulting services focus on optimizing operations, increasing memberships, and enhancing customer satisfaction to boost profitability.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How can a consulting company help to grow my gym?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We provide expert guidance on marketing strategies, member retention programs, facility management, and financial planning. Our tailored solutions are designed to address your specific needs and help you achieve sustained growth.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can you assist with staff training?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely. We offer comprehensive staff training programs that cover customer service, sales techniques, fitness coaching, and operational efficiency to ensure your team performs at its best.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Do you provide financial planning and management advice?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, our consultants are skilled in financial planning and management. We help you create and manage budgets, optimize expenses, and develop strategies to maximize your revenue and profits.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Do you offer special services for different fitness niches?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we cater to various fitness niches, including personal training, group fitness, specialized sports training, and wellness programs. Our services are customized to meet the unique needs of each niche, ensuring effective growth and success.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .faq-section {
+        background-color: #f8f9fa;
+    }
+    
+    .accordion-item {
+        border: none;
+        margin-bottom: 1rem;
+    }
+    
+    .accordion-button {
+        background-color: #ffffff;
+        color: #333;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        color: #0056b3;
+        background-color: #e7f1ff;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: 0 0 0 0.25rem rgba(0,86,179,0.25);
+    }
+    
+    .accordion-body {
+        background-color: #ffffff;
+        border-top: 1px solid rgba(0,0,0,0.125);
+        padding: 1.25rem;
+    }
+    
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230056b3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    </style>
+
+
+<section class="video-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center mb-5">
+                <h2 class="mb-3">Insider's Guide to Pcube Consultancy</h2>
+                <p class="lead mb-4">A Personal Walkthrough by Our Visionary Founder</p>
+                <div class="divider mb-4"></div>
+                <p class="mb-4">Meet Devank Nagpal, the driving force behind Pcube Consultancy. With over a decade of experience in the fitness industry, Devank has transformed countless gyms and fitness centers across the country.</p>
+                <!-- <p class="mb-0">In this exclusive video, Devank shares his wealth of knowledge and provides an in-depth explanation of our innovative fitness consultation process. His unique insights and proven strategies have revolutionized gym management and member engagement for businesses of all sizes.</p> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="video-wrapper">
+                    <video width="1080" height="1920" controls poster="my_video.mp4">
+                        <source src="my_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="video-content">
+                    <h3 class="mb-4">Devank's Visionary Approach</h3>
+                    <p class="mb-4">Drawing from his extensive background in fitness center operations, business management, and cutting-edge technology integration, Devank has developed a comprehensive methodology that addresses the unique challenges faced by gym owners today.</p>
+                    <h4 class="mb-3">Founder's Expertise:</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Certified Fitness Professional</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Business Strategy Expert</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Technology Integration Specialist</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Recognized Industry Speaker</li>
+                    </ul>
+                    <p class="mt-4">In this video, Devank breaks down the core principles of Pcube's consultation approach:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <h5><i class="fas fa-clipboard-list text-primary me-2"></i>Plan</h5>
+                            <p>Learn how we conduct thorough market analysis and develop customized strategies.</p>
+                        </li>
+                        <li class="mb-3">
+                            <h5><i class="fas fa-cogs text-primary me-2"></i>Develop</h5>
+                            <p>Discover our process for implementing state-of-the-art systems and training programs.</p>
+                        </li>
+                        <li class="mb-3">
+                            <h5><i class="fas fa-chart-line text-primary me-2"></i>Operate</h5>
+                            <p>Understand how we ensure long-term success through ongoing support and optimization.</p>
+                        </li>
+                    </ul>
+                    <p class="mt-4">Devank's passion for fitness and business excellence shines through as he shares real-world examples and success stories. This video offers invaluable insights for both new gym owners and established fitness centers looking to scale their operations.</p>
+                    <a href="index.html#about" class="btn btn-primary btn-lg mt-3">Book a Strategy Session with Devank</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+.video-section {
+    background-color: #f8f9fa;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background-color: #007bff;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 177.78%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-content {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.video-content h3 {
+    color: #333;
+    font-weight: 600;
+}
+
+.video-content h4 {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.video-content p {
+    color: #666;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    font-size: 18px;
+}
+
+@media (max-width: 992px) {
+    .video-wrapper {
+        margin-bottom: 30px;
+    }
+}
+
+
+</style>
+    
+
+
+
+<footer class="footer-section py-5 text-dark shadow">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Social Media Section -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <img src="pcube_logo_final.png" alt="Pcube Consultation Logo" class="footer-logo mb-3">
+                <p>Your Trusted Partner in Gym Management and Growth</p>
+                <div class="d-flex">
+                    <a href="#" class="me-3 text-dark"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="me-3 text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="me-3 text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-dark"><i class="fas fa-envelope fa-lg"></i></a>
+                </div>
+            </div>
+            <!-- About Us Section -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h4 class="mb-3">About Us</h4>
+                <p>Pcube Consultation specializes in comprehensive solutions for gyms and fitness centers. We focus on member engagement, streamlined operations, and innovative marketing strategies.</p>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="col-md-4">
+                <h4 class="mb-3">Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+                    <li><a href="index.html#about" class="text-decoration-none text-dark">About</a></li>
+                    <li><a href="index.html#service" class="text-decoration-none text-dark">Service</a></li>
+                    <li><a href="index.html#portfolio" class="text-decoration-none text-dark">Portfolio</a></li>
+                    <li><a href="index.html#testimonials" class="text-decoration-none text-dark">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2024 Pcube Consultation. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Additional CSS for enhanced styling using Bootstrap classes -->
+<style>
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-section a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: #007bff;
+    }
+
+    .footer-section hr {
+        border-color: #dee2e6;
+    }
+</style>
+    
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
